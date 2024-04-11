@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {createTheme,ThemeProvider} from "@mui/material/styles"
+import Weather from './COMPONENTS/Weather/Weather';
+import { TranseltContext } from './COMPONENTS/Context';
+import Container from '@mui/material/Container';
+import {useState} from "react"
+
+
+
+
+
+
 
 function App() {
+  const [Translat,setTranslat] = useState('en')
+  const [tiems, setTiems] = useState(null)
+  const theme = createTheme({
+      typography:{
+        fontFamily:["IBM"]
+      }
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TranseltContext.Provider value={{Translat,setTranslat,tiems, setTiems}}>
+      <ThemeProvider theme={theme}>
+        <Container maxWidth="sm" dir={Translat === "en" ? "ltr" : "rtl"}>
+            <Weather/>
+        </Container>
+      </ThemeProvider>
+    </TranseltContext.Provider>
   );
 }
 

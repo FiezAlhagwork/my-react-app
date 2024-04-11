@@ -1,0 +1,15 @@
+{
+    "Damascus" : "دمشق",
+    "min": "الصغرى",
+    "max": "الكبرى",
+    "clear sky" :"سماء صافية",
+    "few clouds" :"قليل الغيوم",
+    "scattered clouds" :"غيوم متفرقة",
+    "broken clouds " :"غيوم متقطعة",
+    "shower rain " :"أمطار غزيرة",
+    "rain" :"أمطار ",
+    "thunderstorm" :"عاصفة رعدية ",
+    "snow" :"ثلج ",
+    "mist" :"ضباب ",
+    "overcast clouds":"غيوم ملبدة بالغيوم"
+    }
